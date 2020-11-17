@@ -1,0 +1,1 @@
+Time::DATE_FORMATS[:nice_date] = "%B %e, %Y" #nice_date can be named whatever you want
