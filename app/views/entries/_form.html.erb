@@ -1,11 +1,11 @@
 <%= form_with(model: entry, local: true) do |form| %>
   <% if entry.errors.any? %>
-    <div id="error_explanation is-danger">
-    <div class="meddage-header">
+    <div id="error_explanation">
+    <div class="message-header has-text-danger">
     
       <p><%= pluralize(entry.errors.count, "error") %> prohibited this entry from being saved:</p>
     </div>
-     <div class="message-body">
+     <div class="message-body has-background-danger-dark has-text-white-bis">
       <ul>
         <% entry.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -37,7 +37,7 @@
 
   <div class="field">
     <%= form.label :fats %>
-    <%= form.number_field :fats %>
+    <%= form.number_field :fats, class: "input" %>
   </div>
 
   <div class="actions">
